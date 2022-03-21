@@ -1,0 +1,788 @@
+Prefix(:=<http://www.semanticweb.org/lauren/ontologies/2021/4/myFamily#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/lauren/ontologies/2021/4/myFamily>
+Annotation(rdfs:comment "This is my individual implementation of my groups chosen Microworld, my Family."@en)
+
+Declaration(Class(:Auntie))
+Declaration(Class(:Brother))
+Declaration(Class(:Child))
+Declaration(Class(:Daughter))
+Declaration(Class(:Domain))
+Declaration(Class(:Family))
+Declaration(Class(:Father))
+Declaration(Class(:GrandChild))
+Declaration(Class(:GrandDaughter))
+Declaration(Class(:GrandSon))
+Declaration(Class(:Grandad))
+Declaration(Class(:Grandma))
+Declaration(Class(:Grandparent))
+Declaration(Class(:Husband))
+Declaration(Class(:Mother))
+Declaration(Class(:Parent))
+Declaration(Class(:Pibling))
+Declaration(Class(:Sibling))
+Declaration(Class(:Sister))
+Declaration(Class(:Son))
+Declaration(Class(:Spouse))
+Declaration(Class(:Uncle))
+Declaration(Class(:Wife))
+Declaration(ObjectProperty(:Auntie_of))
+Declaration(ObjectProperty(:BloodRelation_of))
+Declaration(ObjectProperty(:Brother_of))
+Declaration(ObjectProperty(:Child_of))
+Declaration(ObjectProperty(:Daughter_of))
+Declaration(ObjectProperty(:Father_of))
+Declaration(ObjectProperty(:GrandDaughter_of))
+Declaration(ObjectProperty(:GrandSon_of))
+Declaration(ObjectProperty(:Grandad_of))
+Declaration(ObjectProperty(:Grandchild_of))
+Declaration(ObjectProperty(:Grandma_of))
+Declaration(ObjectProperty(:Grandparent_of))
+Declaration(ObjectProperty(:Husband_of))
+Declaration(ObjectProperty(:Mother_of))
+Declaration(ObjectProperty(:Parent_of))
+Declaration(ObjectProperty(:Pibling_of))
+Declaration(ObjectProperty(:Relation_of))
+Declaration(ObjectProperty(:Sibling_of))
+Declaration(ObjectProperty(:Sister_of))
+Declaration(ObjectProperty(:Son_of))
+Declaration(ObjectProperty(:Spouse_of))
+Declaration(ObjectProperty(:Uncle_of))
+Declaration(ObjectProperty(:Wife_of))
+Declaration(ObjectProperty(:has_Auntie))
+Declaration(ObjectProperty(:has_Blood_Relation))
+Declaration(ObjectProperty(:has_Brother))
+Declaration(ObjectProperty(:has_Child))
+Declaration(ObjectProperty(:has_Daughter))
+Declaration(ObjectProperty(:has_Father))
+Declaration(ObjectProperty(:has_GrandDaughter))
+Declaration(ObjectProperty(:has_GrandSon))
+Declaration(ObjectProperty(:has_Grandad))
+Declaration(ObjectProperty(:has_Grandchild))
+Declaration(ObjectProperty(:has_Grandma))
+Declaration(ObjectProperty(:has_Grandparents))
+Declaration(ObjectProperty(:has_Husband))
+Declaration(ObjectProperty(:has_Mother))
+Declaration(ObjectProperty(:has_Parent))
+Declaration(ObjectProperty(:has_Piblings))
+Declaration(ObjectProperty(:has_Relation))
+Declaration(ObjectProperty(:has_Sibling))
+Declaration(ObjectProperty(:has_Sister))
+Declaration(ObjectProperty(:has_Son))
+Declaration(ObjectProperty(:has_Spouse))
+Declaration(ObjectProperty(:has_Uncle))
+Declaration(ObjectProperty(:has_Wife))
+Declaration(DataProperty(:has_Auntie))
+Declaration(DataProperty(:has_Brother))
+Declaration(DataProperty(:has_Daughter))
+Declaration(DataProperty(:has_Family))
+Declaration(DataProperty(:has_Father))
+Declaration(DataProperty(:has_Grandad))
+Declaration(DataProperty(:has_Grandaughter))
+Declaration(DataProperty(:has_Grandma))
+Declaration(DataProperty(:has_Grandson))
+Declaration(DataProperty(:has_Husband))
+Declaration(DataProperty(:has_Mother))
+Declaration(DataProperty(:has_Sister))
+Declaration(DataProperty(:has_Son))
+Declaration(DataProperty(:has_Spouse))
+Declaration(DataProperty(:has_Uncle))
+Declaration(DataProperty(:has_Wife))
+Declaration(NamedIndividual(:Clark))
+Declaration(NamedIndividual(:Debby))
+Declaration(NamedIndividual(:Jack))
+Declaration(NamedIndividual(:Jenny))
+Declaration(NamedIndividual(:Ria))
+Declaration(NamedIndividual(:Wilson))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :Auntie_of (:Auntie_of)
+
+SubObjectPropertyOf(:Auntie_of :Pibling_of)
+InverseObjectProperties(:Auntie_of :has_Auntie)
+InverseFunctionalObjectProperty(:Auntie_of)
+AsymmetricObjectProperty(:Auntie_of)
+IrreflexiveObjectProperty(:Auntie_of)
+ObjectPropertyDomain(:Auntie_of :Domain)
+ObjectPropertyRange(:Auntie_of :Family)
+
+# Object Property: :BloodRelation_of (:BloodRelation_of)
+
+SubObjectPropertyOf(:BloodRelation_of :Relation_of)
+
+# Object Property: :Brother_of (:Brother_of)
+
+SubObjectPropertyOf(:Brother_of :Sibling_of)
+InverseObjectProperties(:Brother_of :has_Brother)
+AsymmetricObjectProperty(:Brother_of)
+IrreflexiveObjectProperty(:Brother_of)
+ObjectPropertyDomain(:Brother_of :Domain)
+ObjectPropertyRange(:Brother_of :Family)
+
+# Object Property: :Child_of (:Child_of)
+
+SubObjectPropertyOf(:Child_of :BloodRelation_of)
+
+# Object Property: :Daughter_of (:Daughter_of)
+
+SubObjectPropertyOf(:Daughter_of :Child_of)
+InverseObjectProperties(:Daughter_of :has_Daughter)
+AsymmetricObjectProperty(:Daughter_of)
+IrreflexiveObjectProperty(:Daughter_of)
+ObjectPropertyDomain(:Daughter_of :Domain)
+ObjectPropertyRange(:Daughter_of :Family)
+
+# Object Property: :Father_of (:Father_of)
+
+SubObjectPropertyOf(:Father_of :Parent_of)
+InverseObjectProperties(:Father_of :has_Father)
+InverseFunctionalObjectProperty(:Father_of)
+AsymmetricObjectProperty(:Father_of)
+IrreflexiveObjectProperty(:Father_of)
+ObjectPropertyDomain(:Father_of :Domain)
+ObjectPropertyRange(:Father_of :Family)
+
+# Object Property: :GrandDaughter_of (:GrandDaughter_of)
+
+SubObjectPropertyOf(:GrandDaughter_of :Grandchild_of)
+InverseObjectProperties(:GrandDaughter_of :has_GrandDaughter)
+AsymmetricObjectProperty(:GrandDaughter_of)
+IrreflexiveObjectProperty(:GrandDaughter_of)
+ObjectPropertyDomain(:GrandDaughter_of :Domain)
+ObjectPropertyRange(:GrandDaughter_of :Family)
+
+# Object Property: :GrandSon_of (:GrandSon_of)
+
+SubObjectPropertyOf(:GrandSon_of :Grandchild_of)
+InverseObjectProperties(:GrandSon_of :has_GrandSon)
+AsymmetricObjectProperty(:GrandSon_of)
+IrreflexiveObjectProperty(:GrandSon_of)
+ObjectPropertyDomain(:GrandSon_of :Domain)
+ObjectPropertyRange(:GrandSon_of :Family)
+
+# Object Property: :Grandad_of (:Grandad_of)
+
+SubObjectPropertyOf(:Grandad_of :Grandparent_of)
+InverseObjectProperties(:Grandad_of :has_Grandad)
+InverseFunctionalObjectProperty(:Grandad_of)
+AsymmetricObjectProperty(:Grandad_of)
+IrreflexiveObjectProperty(:Grandad_of)
+ObjectPropertyDomain(:Grandad_of :Domain)
+ObjectPropertyRange(:Grandad_of :Family)
+
+# Object Property: :Grandchild_of (:Grandchild_of)
+
+SubObjectPropertyOf(:Grandchild_of :BloodRelation_of)
+
+# Object Property: :Grandma_of (:Grandma_of)
+
+SubObjectPropertyOf(:Grandma_of :Grandparent_of)
+InverseObjectProperties(:Grandma_of :has_Grandma)
+InverseFunctionalObjectProperty(:Grandma_of)
+AsymmetricObjectProperty(:Grandma_of)
+IrreflexiveObjectProperty(:Grandma_of)
+ObjectPropertyDomain(:Grandma_of :Domain)
+ObjectPropertyRange(:Grandma_of :Family)
+
+# Object Property: :Grandparent_of (:Grandparent_of)
+
+SubObjectPropertyOf(:Grandparent_of :BloodRelation_of)
+
+# Object Property: :Husband_of (:Husband_of)
+
+SubObjectPropertyOf(:Husband_of :Spouse_of)
+InverseObjectProperties(:Husband_of :has_Husband)
+InverseFunctionalObjectProperty(:Husband_of)
+AsymmetricObjectProperty(:Husband_of)
+IrreflexiveObjectProperty(:Husband_of)
+ObjectPropertyDomain(:Husband_of :Domain)
+ObjectPropertyRange(:Husband_of :Spouse)
+
+# Object Property: :Mother_of (:Mother_of)
+
+SubObjectPropertyOf(:Mother_of :Parent_of)
+InverseObjectProperties(:Mother_of :has_Mother)
+InverseFunctionalObjectProperty(:Mother_of)
+AsymmetricObjectProperty(:Mother_of)
+IrreflexiveObjectProperty(:Mother_of)
+ObjectPropertyDomain(:Mother_of :Domain)
+ObjectPropertyRange(:Mother_of :Family)
+
+# Object Property: :Parent_of (:Parent_of)
+
+SubObjectPropertyOf(:Parent_of :BloodRelation_of)
+
+# Object Property: :Pibling_of (:Pibling_of)
+
+SubObjectPropertyOf(:Pibling_of :BloodRelation_of)
+
+# Object Property: :Relation_of (:Relation_of)
+
+SubObjectPropertyOf(:Relation_of owl:topObjectProperty)
+
+# Object Property: :Sibling_of (:Sibling_of)
+
+SubObjectPropertyOf(:Sibling_of :BloodRelation_of)
+
+# Object Property: :Sister_of (:Sister_of)
+
+SubObjectPropertyOf(:Sister_of :Sibling_of)
+InverseObjectProperties(:Sister_of :has_Sister)
+AsymmetricObjectProperty(:Sister_of)
+IrreflexiveObjectProperty(:Sister_of)
+ObjectPropertyDomain(:Sister_of :Domain)
+ObjectPropertyRange(:Sister_of :Family)
+
+# Object Property: :Son_of (:Son_of)
+
+SubObjectPropertyOf(:Son_of :Child_of)
+InverseObjectProperties(:Son_of :has_Son)
+AsymmetricObjectProperty(:Son_of)
+IrreflexiveObjectProperty(:Son_of)
+ObjectPropertyDomain(:Son_of :Domain)
+ObjectPropertyRange(:Son_of :Family)
+
+# Object Property: :Spouse_of (:Spouse_of)
+
+SubObjectPropertyOf(:Spouse_of :BloodRelation_of)
+
+# Object Property: :Uncle_of (:Uncle_of)
+
+SubObjectPropertyOf(:Uncle_of :Pibling_of)
+InverseObjectProperties(:Uncle_of :has_Uncle)
+InverseFunctionalObjectProperty(:Uncle_of)
+AsymmetricObjectProperty(:Uncle_of)
+IrreflexiveObjectProperty(:Uncle_of)
+ObjectPropertyDomain(:Uncle_of :Domain)
+ObjectPropertyRange(:Uncle_of :Family)
+
+# Object Property: :Wife_of (:Wife_of)
+
+SubObjectPropertyOf(:Wife_of :Spouse_of)
+InverseObjectProperties(:Wife_of :has_Wife)
+FunctionalObjectProperty(:Wife_of)
+AsymmetricObjectProperty(:Wife_of)
+IrreflexiveObjectProperty(:Wife_of)
+ObjectPropertyDomain(:Wife_of :Domain)
+ObjectPropertyRange(:Wife_of :Spouse)
+
+# Object Property: :has_Auntie (:has_Auntie)
+
+SubObjectPropertyOf(:has_Auntie :has_Piblings)
+AsymmetricObjectProperty(:has_Auntie)
+IrreflexiveObjectProperty(:has_Auntie)
+ObjectPropertyDomain(:has_Auntie :Domain)
+ObjectPropertyRange(:has_Auntie :Family)
+
+# Object Property: :has_Blood_Relation (:has_Blood_Relation)
+
+SubObjectPropertyOf(:has_Blood_Relation :has_Relation)
+
+# Object Property: :has_Brother (:has_Brother)
+
+SubObjectPropertyOf(:has_Brother :has_Sibling)
+AsymmetricObjectProperty(:has_Brother)
+IrreflexiveObjectProperty(:has_Brother)
+ObjectPropertyDomain(:has_Brother :Domain)
+ObjectPropertyRange(:has_Brother :Family)
+
+# Object Property: :has_Child (:has_Child)
+
+SubObjectPropertyOf(:has_Child :has_Blood_Relation)
+
+# Object Property: :has_Daughter (:has_Daughter)
+
+SubObjectPropertyOf(:has_Daughter :has_Child)
+AsymmetricObjectProperty(:has_Daughter)
+IrreflexiveObjectProperty(:has_Daughter)
+ObjectPropertyDomain(:has_Daughter :Domain)
+ObjectPropertyRange(:has_Daughter :Family)
+
+# Object Property: :has_Father (:has_Father)
+
+SubObjectPropertyOf(:has_Father :has_Parent)
+FunctionalObjectProperty(:has_Father)
+AsymmetricObjectProperty(:has_Father)
+IrreflexiveObjectProperty(:has_Father)
+ObjectPropertyDomain(:has_Father :Domain)
+ObjectPropertyRange(:has_Father :Family)
+
+# Object Property: :has_GrandDaughter (:has_GrandDaughter)
+
+SubObjectPropertyOf(:has_GrandDaughter :has_Grandchild)
+AsymmetricObjectProperty(:has_GrandDaughter)
+IrreflexiveObjectProperty(:has_GrandDaughter)
+ObjectPropertyDomain(:has_GrandDaughter :Domain)
+ObjectPropertyRange(:has_GrandDaughter :Family)
+
+# Object Property: :has_GrandSon (:has_GrandSon)
+
+SubObjectPropertyOf(:has_GrandSon :has_Grandchild)
+AsymmetricObjectProperty(:has_GrandSon)
+IrreflexiveObjectProperty(:has_GrandSon)
+ObjectPropertyDomain(:has_GrandSon :Domain)
+ObjectPropertyRange(:has_GrandSon :Family)
+
+# Object Property: :has_Grandad (:has_Grandad)
+
+SubObjectPropertyOf(:has_Grandad :has_Grandparents)
+FunctionalObjectProperty(:has_Grandad)
+AsymmetricObjectProperty(:has_Grandad)
+IrreflexiveObjectProperty(:has_Grandad)
+ObjectPropertyDomain(:has_Grandad :Domain)
+ObjectPropertyRange(:has_Grandad :Family)
+
+# Object Property: :has_Grandchild (:has_Grandchild)
+
+SubObjectPropertyOf(:has_Grandchild :has_Blood_Relation)
+
+# Object Property: :has_Grandma (:has_Grandma)
+
+SubObjectPropertyOf(:has_Grandma :has_Grandparents)
+FunctionalObjectProperty(:has_Grandma)
+AsymmetricObjectProperty(:has_Grandma)
+IrreflexiveObjectProperty(:has_Grandma)
+ObjectPropertyDomain(:has_Grandma :Domain)
+ObjectPropertyRange(:has_Grandma :Family)
+
+# Object Property: :has_Grandparents (:has_Grandparents)
+
+SubObjectPropertyOf(:has_Grandparents :has_Blood_Relation)
+
+# Object Property: :has_Husband (:has_Husband)
+
+SubObjectPropertyOf(:has_Husband :has_Spouse)
+FunctionalObjectProperty(:has_Husband)
+AsymmetricObjectProperty(:has_Husband)
+IrreflexiveObjectProperty(:has_Husband)
+ObjectPropertyDomain(:has_Husband :Domain)
+ObjectPropertyRange(:has_Husband :Spouse)
+
+# Object Property: :has_Mother (:has_Mother)
+
+SubObjectPropertyOf(:has_Mother :has_Parent)
+FunctionalObjectProperty(:has_Mother)
+AsymmetricObjectProperty(:has_Mother)
+IrreflexiveObjectProperty(:has_Mother)
+ObjectPropertyDomain(:has_Mother :Domain)
+ObjectPropertyRange(:has_Mother :Family)
+
+# Object Property: :has_Parent (:has_Parent)
+
+SubObjectPropertyOf(:has_Parent :has_Blood_Relation)
+
+# Object Property: :has_Piblings (:has_Piblings)
+
+SubObjectPropertyOf(:has_Piblings :has_Blood_Relation)
+
+# Object Property: :has_Sibling (:has_Sibling)
+
+SubObjectPropertyOf(:has_Sibling :has_Blood_Relation)
+
+# Object Property: :has_Sister (:has_Sister)
+
+SubObjectPropertyOf(:has_Sister :has_Sibling)
+AsymmetricObjectProperty(:has_Sister)
+IrreflexiveObjectProperty(:has_Sister)
+ObjectPropertyDomain(:has_Sister :Domain)
+ObjectPropertyRange(:has_Sister :Family)
+
+# Object Property: :has_Son (:has_Son)
+
+SubObjectPropertyOf(:has_Son :has_Child)
+AsymmetricObjectProperty(:has_Son)
+IrreflexiveObjectProperty(:has_Son)
+ObjectPropertyDomain(:has_Son :Domain)
+ObjectPropertyRange(:has_Son :Family)
+
+# Object Property: :has_Spouse (:has_Spouse)
+
+SubObjectPropertyOf(:has_Spouse :has_Blood_Relation)
+
+# Object Property: :has_Uncle (:has_Uncle)
+
+SubObjectPropertyOf(:has_Uncle :has_Piblings)
+AsymmetricObjectProperty(:has_Uncle)
+IrreflexiveObjectProperty(:has_Uncle)
+ObjectPropertyDomain(:has_Uncle :Domain)
+ObjectPropertyRange(:has_Uncle :Family)
+
+# Object Property: :has_Wife (:has_Wife)
+
+SubObjectPropertyOf(:has_Wife :has_Spouse)
+FunctionalObjectProperty(:has_Wife)
+AsymmetricObjectProperty(:has_Wife)
+IrreflexiveObjectProperty(:has_Wife)
+ObjectPropertyDomain(:has_Wife :Domain)
+ObjectPropertyRange(:has_Wife :Spouse)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :has_Auntie (:has_Auntie)
+
+SubDataPropertyOf(:has_Auntie :has_Family)
+DataPropertyDomain(:has_Auntie :Pibling)
+DataPropertyRange(:has_Auntie xsd:string)
+
+# Data Property: :has_Brother (:has_Brother)
+
+SubDataPropertyOf(:has_Brother :has_Family)
+DataPropertyDomain(:has_Brother :Sibling)
+DataPropertyRange(:has_Brother xsd:string)
+
+# Data Property: :has_Daughter (:has_Daughter)
+
+SubDataPropertyOf(:has_Daughter :has_Family)
+DataPropertyDomain(:has_Daughter :Child)
+DataPropertyRange(:has_Daughter xsd:string)
+
+# Data Property: :has_Family (:has_Family)
+
+DataPropertyDomain(:has_Family :Family)
+DataPropertyRange(:has_Family xsd:string)
+
+# Data Property: :has_Father (:has_Father)
+
+SubDataPropertyOf(:has_Father :has_Family)
+DataPropertyDomain(:has_Father :Parent)
+DataPropertyRange(:has_Father xsd:string)
+
+# Data Property: :has_Grandad (:has_Grandad)
+
+SubDataPropertyOf(:has_Grandad :has_Family)
+DataPropertyDomain(:has_Grandad :Grandparent)
+DataPropertyRange(:has_Grandad xsd:string)
+
+# Data Property: :has_Grandaughter (:has_Grandaughter)
+
+SubDataPropertyOf(:has_Grandaughter :has_Family)
+
+# Data Property: :has_Grandma (:has_Grandma)
+
+SubDataPropertyOf(:has_Grandma :has_Family)
+DataPropertyDomain(:has_Grandma :Grandparent)
+DataPropertyRange(:has_Grandma xsd:string)
+
+# Data Property: :has_Grandson (:has_Grandson)
+
+SubDataPropertyOf(:has_Grandson :has_Family)
+
+# Data Property: :has_Husband (:has_Husband)
+
+SubDataPropertyOf(:has_Husband :has_Spouse)
+DataPropertyDomain(:has_Husband :Spouse)
+DataPropertyRange(:has_Husband xsd:string)
+
+# Data Property: :has_Mother (:has_Mother)
+
+SubDataPropertyOf(:has_Mother :has_Family)
+DataPropertyDomain(:has_Mother :Parent)
+DataPropertyRange(:has_Mother xsd:string)
+
+# Data Property: :has_Sister (:has_Sister)
+
+SubDataPropertyOf(:has_Sister :has_Family)
+DataPropertyDomain(:has_Sister :Sibling)
+DataPropertyRange(:has_Sister xsd:string)
+
+# Data Property: :has_Son (:has_Son)
+
+SubDataPropertyOf(:has_Son :has_Family)
+DataPropertyDomain(:has_Son :Child)
+DataPropertyRange(:has_Son xsd:string)
+
+# Data Property: :has_Spouse (:has_Spouse)
+
+DataPropertyDomain(:has_Spouse :Spouse)
+DataPropertyRange(:has_Spouse xsd:string)
+
+# Data Property: :has_Uncle (:has_Uncle)
+
+SubDataPropertyOf(:has_Uncle :has_Family)
+DataPropertyDomain(:has_Uncle :Pibling)
+DataPropertyRange(:has_Uncle xsd:string)
+
+# Data Property: :has_Wife (:has_Wife)
+
+SubDataPropertyOf(:has_Wife :has_Spouse)
+DataPropertyDomain(:has_Wife :Spouse)
+DataPropertyRange(:has_Wife xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Auntie (:Auntie)
+
+SubClassOf(:Auntie :Pibling)
+
+# Class: :Brother (:Brother)
+
+SubClassOf(:Brother :Sibling)
+
+# Class: :Child (:Child)
+
+SubClassOf(:Child :Family)
+
+# Class: :Daughter (:Daughter)
+
+SubClassOf(:Daughter :Child)
+
+# Class: :Family (:Family)
+
+SubClassOf(:Family :Domain)
+
+# Class: :Father (:Father)
+
+SubClassOf(:Father :Parent)
+
+# Class: :GrandChild (:GrandChild)
+
+SubClassOf(:GrandChild :Family)
+
+# Class: :GrandDaughter (:GrandDaughter)
+
+SubClassOf(:GrandDaughter :GrandChild)
+
+# Class: :GrandSon (:GrandSon)
+
+SubClassOf(:GrandSon :GrandChild)
+
+# Class: :Grandad (:Grandad)
+
+SubClassOf(:Grandad :Grandparent)
+
+# Class: :Grandma (:Grandma)
+
+SubClassOf(:Grandma :Grandparent)
+
+# Class: :Grandparent (:Grandparent)
+
+SubClassOf(:Grandparent :Family)
+
+# Class: :Husband (:Husband)
+
+SubClassOf(:Husband :Spouse)
+
+# Class: :Mother (:Mother)
+
+SubClassOf(:Mother :Parent)
+
+# Class: :Parent (:Parent)
+
+SubClassOf(:Parent :Family)
+
+# Class: :Pibling (:Pibling)
+
+SubClassOf(:Pibling :Family)
+
+# Class: :Sibling (:Sibling)
+
+SubClassOf(:Sibling :Family)
+
+# Class: :Sister (:Sister)
+
+SubClassOf(:Sister :Sibling)
+
+# Class: :Son (:Son)
+
+SubClassOf(:Son :Child)
+
+# Class: :Spouse (:Spouse)
+
+SubClassOf(:Spouse :Domain)
+
+# Class: :Uncle (:Uncle)
+
+SubClassOf(:Uncle :Pibling)
+
+# Class: :Wife (:Wife)
+
+SubClassOf(:Wife :Spouse)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Clark (Clark: Son 2)
+
+AnnotationAssertion(rdfs:label :Clark "Clark: Son 2")
+ClassAssertion(:Son :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:Brother_of :Sister) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:GrandSon_of :Grandad) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:GrandSon_of :Grandma) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:has_Father :Father) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:has_Grandad :Grandad) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:has_Grandma :Grandma) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:has_Mother :Mother) :Clark)
+ClassAssertion(ObjectSomeValuesFrom(:has_Sister :Sister) :Clark)
+ClassAssertion(ObjectAllValuesFrom(:Son_of ObjectIntersectionOf(:Father :Mother)) :Clark)
+ObjectPropertyAssertion(:Brother_of :Clark :Ria)
+ObjectPropertyAssertion(:GrandSon_of :Clark :Debby)
+ObjectPropertyAssertion(:GrandSon_of :Clark :Jack)
+ObjectPropertyAssertion(:Son_of :Clark :Jenny)
+ObjectPropertyAssertion(:Son_of :Clark :Wilson)
+ObjectPropertyAssertion(:has_Father :Clark :Wilson)
+ObjectPropertyAssertion(:has_Grandad :Clark :Jack)
+ObjectPropertyAssertion(:has_Grandma :Clark :Debby)
+ObjectPropertyAssertion(:has_Mother :Clark :Jenny)
+ObjectPropertyAssertion(:has_Sister :Clark :Ria)
+DataPropertyAssertion(:has_Father :Clark "Wilson"^^xsd:string)
+DataPropertyAssertion(:has_Grandad :Clark "Wilson"^^xsd:string)
+DataPropertyAssertion(:has_Grandma :Clark "Debby"^^xsd:string)
+DataPropertyAssertion(:has_Mother :Clark "Jenny"^^xsd:string)
+DataPropertyAssertion(:has_Sister :Clark "Ria"^^xsd:string)
+
+# Individual: :Debby (Debby: Grandma)
+
+AnnotationAssertion(rdfs:label :Debby "Debby: Grandma")
+ClassAssertion(:Grandma :Debby)
+ClassAssertion(:Wife :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:Grandma_of :GrandDaughter) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:Grandma_of :GrandSon) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:Mother_of :Son) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:Wife_of :Husband) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:has_GrandDaughter :GrandDaughter) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:has_GrandSon :GrandSon) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:has_Husband :Husband) :Debby)
+ClassAssertion(ObjectSomeValuesFrom(:has_Son :Son) :Debby)
+ObjectPropertyAssertion(:Grandma_of :Debby :Clark)
+ObjectPropertyAssertion(:Grandma_of :Debby :Ria)
+ObjectPropertyAssertion(:Mother_of :Debby :Wilson)
+ObjectPropertyAssertion(:Wife_of :Debby :Jack)
+ObjectPropertyAssertion(:has_GrandDaughter :Debby :Ria)
+ObjectPropertyAssertion(:has_GrandSon :Debby :Clark)
+ObjectPropertyAssertion(:has_Husband :Debby :Jack)
+ObjectPropertyAssertion(:has_Son :Debby :Wilson)
+DataPropertyAssertion(:has_Grandaughter :Debby "Ria"^^xsd:string)
+DataPropertyAssertion(:has_Grandson :Debby "Clark"^^xsd:string)
+DataPropertyAssertion(:has_Husband :Debby "Jack"^^xsd:string)
+DataPropertyAssertion(:has_Son :Debby "Wilson"^^xsd:string)
+
+# Individual: :Jack (Jack: Grandad)
+
+AnnotationAssertion(rdfs:label :Jack "Jack: Grandad")
+ClassAssertion(:Father :Jack)
+ClassAssertion(:Husband :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:Father_of :Son) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:Grandad_of :GrandDaughter) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:Grandad_of :GrandSon) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:Husband_of :Wife) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:has_GrandDaughter :GrandDaughter) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:has_GrandSon :GrandSon) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:has_Son :Son) :Jack)
+ClassAssertion(ObjectSomeValuesFrom(:has_Wife :Wife) :Jack)
+ObjectPropertyAssertion(:Father_of :Jack :Wilson)
+ObjectPropertyAssertion(:Grandad_of :Jack :Clark)
+ObjectPropertyAssertion(:Grandad_of :Jack :Ria)
+ObjectPropertyAssertion(:Husband_of :Jack :Debby)
+ObjectPropertyAssertion(:has_GrandDaughter :Jack :Ria)
+ObjectPropertyAssertion(:has_GrandSon :Jack :Clark)
+ObjectPropertyAssertion(:has_Son :Jack :Wilson)
+ObjectPropertyAssertion(:has_Wife :Jack :Debby)
+DataPropertyAssertion(:has_Grandaughter :Jack "Ria"^^xsd:string)
+DataPropertyAssertion(:has_Grandson :Jack "Clark"^^xsd:string)
+DataPropertyAssertion(:has_Son :Jack "Wilson"^^xsd:string)
+DataPropertyAssertion(:has_Wife :Jack "Debby"^^xsd:string)
+
+# Individual: :Jenny (Jenny: Wife)
+
+AnnotationAssertion(rdfs:label :Jenny "Jenny: Wife")
+ClassAssertion(:Mother :Jenny)
+ClassAssertion(:Wife :Jenny)
+ClassAssertion(ObjectSomeValuesFrom(:Mother_of :Daughter) :Jenny)
+ClassAssertion(ObjectSomeValuesFrom(:Mother_of :Son) :Jenny)
+ClassAssertion(ObjectSomeValuesFrom(:Wife_of :Husband) :Jenny)
+ClassAssertion(ObjectSomeValuesFrom(:has_Daughter :Daughter) :Jenny)
+ClassAssertion(ObjectSomeValuesFrom(:has_Husband :Husband) :Jenny)
+ClassAssertion(ObjectSomeValuesFrom(:has_Son :Son) :Jenny)
+ObjectPropertyAssertion(:Mother_of :Jenny :Clark)
+ObjectPropertyAssertion(:Mother_of :Jenny :Ria)
+ObjectPropertyAssertion(:Wife_of :Jenny :Wilson)
+ObjectPropertyAssertion(:has_Daughter :Jenny :Ria)
+ObjectPropertyAssertion(:has_Husband :Jenny :Wilson)
+ObjectPropertyAssertion(:has_Son :Jenny :Clark)
+DataPropertyAssertion(:has_Daughter :Jenny "Ria"^^xsd:string)
+DataPropertyAssertion(:has_Husband :Jenny "Wilson"^^xsd:string)
+DataPropertyAssertion(:has_Son :Jenny "Clark"^^xsd:string)
+
+# Individual: :Ria (Ria: Daughter)
+
+AnnotationAssertion(rdfs:label :Ria "Ria: Daughter")
+ClassAssertion(:Daughter :Ria)
+ClassAssertion(:GrandDaughter :Ria)
+ClassAssertion(:Sister :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:GrandDaughter_of :Grandad) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:GrandDaughter_of :Grandma) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:Sister_of :Brother) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:has_Brother :Brother) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:has_Father :Father) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:has_Grandad :Grandad) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:has_Grandma :Grandma) :Ria)
+ClassAssertion(ObjectSomeValuesFrom(:has_Mother :Mother) :Ria)
+ClassAssertion(ObjectAllValuesFrom(:Daughter_of ObjectIntersectionOf(:Father :Mother)) :Ria)
+ObjectPropertyAssertion(:Daughter_of :Ria :Jenny)
+ObjectPropertyAssertion(:Daughter_of :Ria :Wilson)
+ObjectPropertyAssertion(:GrandDaughter_of :Ria :Debby)
+ObjectPropertyAssertion(:GrandDaughter_of :Ria :Jack)
+ObjectPropertyAssertion(:Sister_of :Ria :Clark)
+ObjectPropertyAssertion(:has_Brother :Ria :Clark)
+ObjectPropertyAssertion(:has_Father :Ria :Wilson)
+ObjectPropertyAssertion(:has_Grandad :Ria :Jack)
+ObjectPropertyAssertion(:has_Grandma :Ria :Debby)
+ObjectPropertyAssertion(:has_Mother :Ria :Jenny)
+DataPropertyAssertion(:has_Brother :Ria "Clark"^^xsd:string)
+DataPropertyAssertion(:has_Father :Ria "Wilson"^^xsd:string)
+DataPropertyAssertion(:has_Grandad :Ria "Jack"^^xsd:string)
+DataPropertyAssertion(:has_Grandma :Ria "Debby"^^xsd:string)
+DataPropertyAssertion(:has_Mother :Ria "Jenny"^^xsd:string)
+
+# Individual: :Wilson (Wilson: Son)
+
+AnnotationAssertion(rdfs:label :Wilson "Wilson: Son")
+ClassAssertion(:Brother :Wilson)
+ClassAssertion(:GrandSon :Wilson)
+ClassAssertion(:Husband :Wilson)
+ClassAssertion(:Son :Wilson)
+ClassAssertion(ObjectSomeValuesFrom(:Father_of :Daughter) :Wilson)
+ClassAssertion(ObjectSomeValuesFrom(:Father_of :Son) :Wilson)
+ClassAssertion(ObjectSomeValuesFrom(:Husband_of :Wife) :Wilson)
+ClassAssertion(ObjectSomeValuesFrom(:Son_of :Father) :Wilson)
+ClassAssertion(ObjectSomeValuesFrom(:Son_of :Mother) :Wilson)
+ClassAssertion(ObjectSomeValuesFrom(:has_Wife :Wife) :Wilson)
+ObjectPropertyAssertion(:Father_of :Wilson :Clark)
+ObjectPropertyAssertion(:Father_of :Wilson :Ria)
+ObjectPropertyAssertion(:Husband_of :Wilson :Jenny)
+ObjectPropertyAssertion(:Son_of :Wilson :Debby)
+ObjectPropertyAssertion(:Son_of :Wilson :Jack)
+DataPropertyAssertion(:has_Daughter :Wilson "Ria"^^xsd:string)
+DataPropertyAssertion(:has_Father :Wilson "Jack"^^xsd:string)
+DataPropertyAssertion(:has_Mother :Wilson "Debby"^^xsd:string)
+DataPropertyAssertion(:has_Son :Wilson "Clark"^^xsd:string)
+DataPropertyAssertion(:has_Wife :Wilson "Jenny"^^xsd:string)
+
+
+DifferentIndividuals(:Clark :Debby :Jack :Jenny :Ria :Wilson)
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "If parent has a brother then it implies that they are an Uncle"^^xsd:string) Annotation(rdfs:label "Rule 1"^^xsd:string) Body(ObjectPropertyAtom(:has_Parent Variable(:x1) Variable(:x2)) ObjectPropertyAtom(:has_Brother Variable(:x2) Variable(:x3)))Head(ObjectPropertyAtom(:has_Uncle Variable(:x1) Variable(:x3))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "If a child has a parent implies that child has grandparents"^^xsd:string) Annotation(rdfs:label "Rule 4"^^xsd:string) Body(ObjectPropertyAtom(:has_Parent Variable(:x2) Variable(:x3)) ObjectPropertyAtom(:has_Child Variable(:x1) Variable(:x2)))Head(ObjectPropertyAtom(:has_Grandparents Variable(:x1) Variable(:x3))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "If a Grandparent has a child it implies that they have a granddaughter"^^xsd:string) Annotation(rdfs:label "Rule 5"^^xsd:string) Body(ObjectPropertyAtom(:has_Grandparents Variable(:x1) Variable(:x2)) ObjectPropertyAtom(:has_Child Variable(:x2) Variable(:x3)))Head(ObjectPropertyAtom(:has_GrandDaughter Variable(:x1) Variable(:x3))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "If a Grandparent has a child it implies that they have a grandson"^^xsd:string) Annotation(rdfs:label "Rule 6"^^xsd:string) Body(ObjectPropertyAtom(:has_Grandparents Variable(:x1) Variable(:x2)) ObjectPropertyAtom(:has_Child Variable(:x2) Variable(:x3)))Head(DataPropertyAtom(:has_Grandson Variable(:x1) Variable(:x3))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "If parent has a child it implies that they may be a grandparent"^^xsd:string) Annotation(rdfs:label "Rule 3"^^xsd:string) Body(ObjectPropertyAtom(:has_Parent Variable(:x1) Variable(:x2)) ObjectPropertyAtom(:has_Child Variable(:x2) Variable(:x3)))Head(ObjectPropertyAtom(:has_Grandparents Variable(:x1) Variable(:x3))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "If parent has a sister then it implies that they are an Auntie"^^xsd:string) Annotation(rdfs:label "Rule 2"^^xsd:string) Body(ObjectPropertyAtom(:has_Parent Variable(:x1) Variable(:x2)) ObjectPropertyAtom(:has_Sister Variable(:x2) Variable(:x3)))Head(ObjectPropertyAtom(:has_Auntie Variable(:x1) Variable(:x3))))
+)
